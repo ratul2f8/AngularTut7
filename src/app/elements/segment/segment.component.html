@@ -1,7 +1,8 @@
 <div class="ui placeholder segment">
   <div class="ui icon header">
-    <i class="pdf file outline icon"></i>
-    No documents are listed for this customer.
+    <!-- for selecting class use ".<className>"", for attribute use "<attributeName>"  -->
+    <!-- observe the segmentt.component.scss file to see how to ignore the styling of the div if nothing is passed as a child -->
+      <ng-content select="header"></ng-content>
   </div>
-  <div class="ui primary button">Add Document</div>
+  <ng-content></ng-content>
 </div>
