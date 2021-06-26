@@ -1,1 +1,12 @@
-<p>elements-home works!</p>
+<h2>Placeholder</h2>
+<div class="ui divider"></div>
+<h3>Placholder With headers(default)</h3>
+<app-placeholder></app-placeholder>
+<h3>Placholder Without headers</h3>
+<app-placeholder [header]="false"></app-placeholder>
+<h3>Genearting lines using custom directives(3 lines)</h3>
+<div class="ui placeholder">
+    <ng-container *appTimes="3">
+       <div class="long line"></div>
+    </ng-container>
+  </div>
