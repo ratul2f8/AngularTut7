@@ -4,32 +4,21 @@
   [headers]="headers"
   classNames="striped celled"
 ></app-table>
-<div style="margin-top: 10px;">
-    <app-divider> Tab Menu </app-divider>
+<div style="margin-top: 10px">
+  <app-divider> Tab Menu </app-divider>
 </div>
-<div class="ui grid">
-  <div class="four wide column">
-    <div class="ui vertical fluid tabular menu">
-        <a
-        routerLink="./"
-        routerLinkActive="active"
-        [routerLinkActiveOptions]="{ exact: true}"
-        class="item">Biography</a>
-        <a routerLinkActive="active" 
-        routerLink="./companies"
-        class="item">
-            Companies
-        </a>
-        <a routerLinkActive="active"  href="" 
-        routerLink="./partners"
-        class="item">
-            Partners
-        </a>
-    </div>
-  </div>
-  <div class="twelve wide stretched column">
-    <div class="ui segment">
-      <router-outlet></router-outlet>
-    </div>
-  </div>
-</div>
+<app-tabs>
+  <a
+    routerLink="./"
+    routerLinkActive="active"
+    [routerLinkActiveOptions]="{ exact: true }"
+    class="item"
+    >Biography</a
+  >
+  <a routerLinkActive="active" routerLink="./companies" class="item">
+    Companies
+  </a>
+  <a routerLinkActive="active" href="" routerLink="./partners" class="item">
+    Partners
+  </a>
+</app-tabs>
