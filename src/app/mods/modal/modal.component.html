@@ -1,0 +1,11 @@
+<div class="ui dimmer visible active" (click)="triggerCloseModalAction()">
+    <!-- IMPORTANT: For handling event bubbling (dont't close the modal if clicked on the white backgrounded area) -->
+  <div class="ui modal visible active" (click)="$event.stopPropagation()">
+    <i class="close icon" (click)="triggerCloseModalAction()"></i>
+    <div class="header">MODAL</div>
+    <div class="content">Some content</div>
+    <div class="actions">
+      <button class="ui button" (click)="triggerCloseModalAction()">Ok</button>
+    </div>
+  </div>
+</div>
